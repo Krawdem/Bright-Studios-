@@ -1,0 +1,150 @@
+.headerTwo {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #000;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.headerTwo__container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.headerTwo__top {
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerTwo__logo {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.headerTwo__topLeft {
+    display: flex;
+    width: 50%;
+}
+
+.headerTwo__topRight {
+    display: flex;
+    align-items: center;
+}
+
+.headerTwo__search {
+    display: flex;
+    width: 100%;
+    max-width: 444px;
+}
+
+.headerTwo__search input {
+    padding: 8px;
+    width: 100%;
+    max-width: 444px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+}
+
+.headerTwo__search .headerTwo__searchButton {
+    background: #fff;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.headerTwo__navList {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.headerTwo__accountText {
+    color: #FFFFFF;
+}
+
+.headerTwo__navListItem {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.headerTwo__navListItem a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.headerTwo__navListItem_red a {
+    color: red;
+}
+
+.headerTwo__account {
+    display: flex;
+    align-items: center;
+}
+
+.headerTwo__button {
+    background-color: #5cb85c;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.headerTwo__buttonWrapper {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.headerTwo__lang {
+    display: flex;
+    align-items: center;
+}
+
+.headerTwo__searchIcon {
+    fill: #000000;
+}
+
+.headerTwo__nav {
+    overflow-x: scroll;
+    scrollbar-width: none;
+}
+
+@media (max-width: 768px) {
+    .headerTwo__searchInput {
+        display: none;
+    }
+
+    .headerTwo__search .headerTwo__searchButton {
+        background: transparent;
+        border: none;
+        padding: 8px 10px;
+        border-radius: 0 4px 4px 0;
+        cursor: pointer;
+    }
+
+    .headerTwo__buttonWrapper {
+        display: none;
+    }
+
+    .headerTwo__accountText {
+        display: none;
+    }
+
+    .headerTwo__account {
+        gap: 12px;
+    }
+
+    .headerTwo__lang {
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+
+    .headerTwo__searchIcon {
+        fill: #FFFFFF;
+    }
+}

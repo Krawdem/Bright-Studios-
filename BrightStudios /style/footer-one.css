@@ -1,0 +1,277 @@
+.footerOne {
+    width: 100%;
+    bottom: 0;
+}
+
+.footerOne__top {
+    display: flex;
+    min-height: 100px;
+}
+
+.footerOne__topCard {
+    display: flex;
+    width: 25%;
+    align-items: center;
+    justify-content: center;
+}
+
+.footerOne__topCardIcon {
+    width: 43px;
+}
+
+.footerOne__topCardIcon_second {
+    width: 80px;
+}
+
+.footerOne__topCardTitle {
+    font-size: 10px;
+    text-align: left;
+}
+
+.footerOne__topCardSubtitle {
+    font-size: 14px;
+}
+
+.footerOne__docs {
+    background: #F7F7F7;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.footerOne__docsCardWrapper {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footerOne__docsCardInfoTitle {
+    font-weight: 700;
+    font-size: 16px;
+    height: 30px;
+    position: relative;
+}
+
+.footerOne__docsCardInfoListItem {
+    height: 30px;
+    font-size: 14px;
+    color: #333333;
+}
+
+.footerOne__docsCardInfoIconLeft {
+    width: 24px;
+    display: none;
+}
+
+.footerOne__docsCardInfoIconRight {
+    width: 16px;
+    display: none;
+}
+
+.footerOne__company {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+}
+
+.footerOne__companySocials {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    border-right: 2px solid #9c9c9c;
+    width: 60%;
+}
+
+.footerOne__companySocialsLink {
+    text-decoration: none;
+}
+
+.footerOne__companySocialsIcons {
+    width: 100%;
+    max-width: 34px;
+}
+
+.footerOne__companyPayments {
+    padding: 10px 20px;
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.footerOne__companyPaymentsItem {
+    display: flex;
+    align-items: center;
+}
+
+.footerOne__applicationContent {
+    display: flex;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.footerOne__applicationText {
+    width: 100%;
+    max-width: 386px;
+}
+
+.footerOne__applicationLink {
+    color: #333333;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.footerOne__applicationImages {
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footerOne__application {
+    background: #F7F7F7;
+    padding: 15px 10px 20px;
+}
+
+.footerOne__infoSection {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: #777777;
+}
+
+.footerOne__infoSectionContent {
+    width: 100%;
+    padding: 8px;
+}
+
+.footerOne__infoSectionContentList {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footerOne__licence {
+    padding: 8px 8px 10px;
+    text-align: center;
+}
+
+.footerOne__popularList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0 20px 20px;
+}
+
+.footerOne__popularListItem {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footerOne__popularListItemLink {
+    font-size: 12px;
+    color: #000000;
+    margin: 12px;
+    line-height: 17px;
+    display: inline-block;
+}
+
+@media (max-width: 991px) {
+    .footerOne__topCard {
+        flex-wrap: wrap;
+    }
+
+    .footerOne__topCardTitle {
+        text-align-last: center;
+    }
+
+    .footerOne__topCardSubtitle {
+        text-align-last: center;
+    }
+
+    .footerOne__topCardText {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .footerOne__docsCardWrapper {
+        flex-wrap: wrap;
+    }
+
+    .footerOne__docsCardInfo {
+        width: 100%;
+    }
+
+    .footerOne__docsCardInfoList {
+        display: none;
+    }
+
+    .footerOne__docsCardInfoIconLeft {
+        width: 24px;
+        display: inline-block;
+        margin-right: 8px;
+    }
+
+    .footerOne__docsCardInfoIconRight {
+        width: 16px;
+        display: block;
+        height: 16px;
+        position: absolute;
+        right: 16px;
+        top: 22px;
+    }
+
+    .footerOne__docsCardInfoTitle {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #d1d1d1;
+        padding-left: 20px;
+        font-weight: 400;
+    }
+
+    .footerOne__company {
+        display: block;
+    }
+
+    .footerOne__companySocials {
+        border-right: none;
+        width: 100%;
+    }
+
+    .footerOne__companyPayments {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .footerOne__topCard {
+        width: 50%;
+        min-height: 150px;
+    }
+
+    .footerOne__top {
+        flex-wrap: wrap;
+    }
+
+    .footerOne__applicationContent {
+        flex-wrap: wrap;
+    }
+
+    .footerOne__applicationText {
+        max-width: 100%;
+    }
+
+    .footerOne__applicationImages {
+        max-width: 100%;
+    }
+
+    .footerOne__applicationImage {
+        width: 100%;
+    }
+
+    .footerOne__infoSection {
+        display: block;
+        text-align: center;
+    }
+}

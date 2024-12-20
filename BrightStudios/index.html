@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Таймер зворотного відліку</title>
+  <link rel="stylesheet" href="style/index.css">
+</head>
+<body>
+<div class="wrapper">
+  <header id="header-1" class="headerOne active">
+    <div class="headerOne__top">
+      <a href="">
+        <div class="headerOne__logo">
+            <span>
+              <img class="headerOne__logoImage" src="/images/logo.svg" alt="">
+            </span>
+        </div>
+      </a>
+      <div class="headerOne__arrowWrapper">
+        <svg viewBox="0 0 24 24" class="header__arrow" fill="#828282" stroke="none" stroke-width="1">
+          <g><title>icons / nav24 / chevron down</title></g>
+          <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="icons-/-nav24-/-chevron-down" fill="#828282">
+              <path d="M12.5785173,12.0211459 L7.32684676,17.2728165 C6.89000935,17.7096539 6.89128668,18.4184991 7.32927694,18.8564894 L8.18580253,19.713015 C8.62367488,20.1508873 9.33282729,20.1520932 9.7694754,19.7154451 L16.6731532,12.8117673 C16.891168,12.5937525 17.0000588,12.3079872 17,12.0219532 C16.999935,11.7342401 16.8910737,11.4484451 16.6731532,11.2305246 L9.7694754,4.32684676 C9.33263799,3.89000935 8.62379279,3.89128668 8.18580253,4.32927694 L7.32927694,5.18580253 C6.89140459,5.62367488 6.89019865,6.33282729 7.32684676,6.7694754 L12.5785173,12.0211459 Z"
+                    id="Combined-Shape"
+                    transform="translate(12.000000, 12.021088) rotate(-270.000000) translate(-12.000000, -12.021088) ">
+              </path>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div class="search-container">
+        <input type="text" placeholder="Que cherchez-vous ?">
+        <button>
+          <svg viewBox="0 0 43.09 43.64" width="24" height="24" class="">
+            <g><title>search</title></g>
+            <g id="Calque_2" data-name="Calque 2">
+              <g id="Calque_1-2" data-name="Calque 1" fill="#ffffff">
+                <path d="M42.51,40.28,30.17,27.94a17.26,17.26,0,1,0-2.86,2.71L39.73,43.06a2,2,0,1,0,2.78-2.78ZM25.14,28.47A14,14,0,1,1,28,25.76"></path>
+              </g>
+            </g>
+          </svg>
+        </button> <!-- Unicode for search icon -->
+      </div>
+      <a href="">
+        <img class="headerOne__imageLeft" src="/images/header-image-left.svg" alt="">
+      </a>
+    </div>
+    <div class="headerOne__bottom">
+      <nav>
+        <a class="headerOne__navLink" href="#"><span class="icon">
+<img src="https://cdn-icons-png.flaticon.com/128/5942/5942295.png" loading="lazy" alt="Открыть меню "
+     title="Открыть меню " width="24" height="24">
+      </span> Parcourir les catégories</a>
+        <a class="headerOne__navLink" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="#828282" width="24" height="24" viewBox="0 0 48 48">
+            <path
+                    d="M3 23.344C3 11.556 12.556 2 24.344 2 36.133 2 45.69 11.556 45.69 23.344c-.01 11.784-9.56 21.334-21.345 21.345C12.556 44.689 3 35.133 3 23.344zM24.344 4.958a18.416 18.416 0 1018.417 18.386C42.734 13.19 34.5 4.968 24.344 4.958z"></path>
+            <path
+                    d="M17.788 20.15c.809-4.22 3.658-7.059 7.158-7.059a6.369 6.369 0 015.659 3.254l-2.297 2.248a3.944 3.944 0 00-3.342-2.07 3.224 3.224 0 00-2.81 1.557 4.703 4.703 0 00-.73 2.07h7.079l-.483 1.972h-7.01a6.23 6.23 0 00-.069.858c-.01.17-.01.342 0 .512h6.744l-.474 2.17H21.23c.059.736.274 1.452.631 2.1a4.013 4.013 0 003.421 1.971 3.569 3.569 0 002.86-1.489l1.97 2.662a6.901 6.901 0 01-10.745-.73 10.391 10.391 0 01-1.627-4.515h-1.666l.483-2.1h.986a5.511 5.511 0 010-.562 5.915 5.915 0 010-.808h-1.47l.484-1.972 1.232-.069z"></path>
+          </svg>
+          Mettre en vente
+        </a>
+        <a class="headerOne__navLink" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="#828282" width="24" height="24" viewBox="0 0 48 48">
+            <path d="M23.5 5.75c-9.792 0-17.75 6.583-17.75 14.67 0 4.464 2.43 8.636 6.675 11.441l.614.404v6.647l6.335-4.218.541.092c1.185.201 2.384.302 3.585.303 9.755 0 17.75-6.583 17.75-14.67 0-8.086-7.995-14.669-17.75-14.669zm-1.485 13.826c2.704-.458 4.217-1.485 4.217-2.888 0-1.22-.963-2.017-2.384-2.017a4.74 4.74 0 00-3.502 1.44L18.1 13.726a8.306 8.306 0 015.73-2.274c3.484 0 6.07 2.246 6.07 5.272 0 2.31-1.33 3.85-4.447 5.06v2.522h-3.438v-4.731zm0 10.287v-3.43h3.438v3.439l-3.438-.01zm-11.68 14.192V33.732C5.65 30.412 3 25.6 3 20.419 3 10.811 12.168 3 23.5 3S44 10.811 44 20.42c0 9.608-9.168 17.419-20.5 17.419a24.36 24.36 0 01-3.502-.257l-9.663 6.473z"></path>
+          </svg>
+          Aide</a>
+        <a class="headerOne__navLink headerOne__navLinkImage" href="#"><img src="/images/company-icon/club-rd1.svg"
+                                                                            alt=""></span></a>
+        <a class="headerOne__navLink" href="#">
+          <svg viewBox="0 0 48 48" width="24" height="24" class="" fill="#828282" stroke="none" stroke-width="1">
+            <g><title>icons / nav / heart</title></g>
+            <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="icons-/-nav-/-heart" fill="#828282">
+                <g transform="translate(-11,4) scale(1.8,1.8)">
+                  <path d="M25.8652238,0.12907923 C23.4275939,0.106479753 21.1587336,1.37412917 19.8957918,3.46429866 C18.3336929,0.752113222 15.1506737,-0.57216073 12.1318533,0.234163688 C9.11303279,1.04048811 7.00932079,3.77684353 7.00053304,6.90861148 C6.90502213,15.8841889 19.6765759,24 19.6765759,24 C19.6765759,24 32.6179371,16.1592699 32.7136317,7.18378458 C32.7657213,3.33997343 29.6996577,0.181549438 25.8652238,0.12907923 Z M24.9442782,17.5748141 C23.3105199,19.1162773 21.557016,20.5250033 19.7003618,21.7876599 C17.8708542,20.4858422 16.1475677,19.0401744 14.5468134,17.4643398 C11.918794,14.8513462 8.79485246,10.9024419 8.83728135,6.92868098 C8.85896406,4.10252292 11.1587578,1.82733684 13.9780643,1.84290403 C15.7704283,1.85982834 17.4189681,2.82972813 18.3076474,4.39016545 L19.8569446,7.0584883 L21.4627218,4.42395218 C22.3845691,2.88307911 24.0533464,1.94885349 25.8455706,1.97031774 C28.6644237,2.01513425 30.9151663,4.33879669 30.8768834,7.1646357 C30.8345464,11.1379363 27.6272165,15.019175 24.9442782,17.5748141 Z"
+                        id="path-1"></path>
+                </g>
+              </g>
+            </g>
+          </svg>
+          Mes favoris</a>
+        <a class="headerOne__navLink" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#828282" viewBox="0 0 48 48">
+            <path d="M23.756 27.401c-6.3 0-11.409-5.238-11.409-11.7C12.347 9.239 17.455 4 23.756 4c6.3 0 11.409 5.239 11.409 11.7 0 6.463-5.108 11.701-11.409 11.701zm0-2.799c4.793 0 8.68-3.985 8.68-8.901s-3.887-8.902-8.68-8.902c-4.794 0-8.68 3.986-8.68 8.902 0 4.916 3.886 8.901 8.68 8.901zm6.835 5.61l.577-.3.592.269c5.61 2.549 9.322 6.46 10.772 11.932L43 43.879H5.024l.454-1.758c1.414-5.473 5.12-9.39 10.748-11.94l.591-.269.577.3a14.287 14.287 0 0013.197 0zm-13.829 2.794c-3.956 1.916-6.67 4.562-8.072 8.074h30.62c-1.424-3.514-4.142-6.16-8.088-8.074a16.948 16.948 0 01-14.46 0z"></path>
+          </svg>
+          Se connecter
+        </a>
+        <a class="headerOne__navLink" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#828282" viewBox="0 0 48 48">
+            <path d="M19.468 40.537c1.5 0 2.717-1.234 2.717-2.757 0-1.522-1.217-2.756-2.717-2.756s-2.717 1.234-2.717 2.756c0 1.523 1.216 2.757 2.717 2.757zm0 2.833c-3.042 0-5.508-2.503-5.508-5.59 0-3.086 2.466-5.589 5.508-5.589s5.508 2.503 5.508 5.59c0 3.086-2.466 5.589-5.508 5.589zm17.249-2.833c1.5 0 2.717-1.234 2.717-2.757 0-1.522-1.217-2.756-2.717-2.756S34 36.258 34 37.78c0 1.523 1.217 2.757 2.717 2.757zm0 2.833c-3.042 0-5.508-2.503-5.508-5.59 0-3.086 2.466-5.589 5.508-5.589s5.508 2.503 5.508 5.59c0 3.086-2.466 5.589-5.508 5.589zM9.15 13.297L6.963 6.832H2.396C1.625 6.832 1 6.198 1 5.416 1 4.634 1.625 4 2.396 4h5.563c.596 0 1.126.384 1.32.956l2.512 7.421.633 1.87-1.95.006a1.397 1.397 0 01-1.312-.925 1.53 1.53 0 01-.086-.487 1.406 1.406 0 011.391-1.42l34.6-.095c.935-.002 1.608.91 1.343 1.818l-5.154 17.674a1.398 1.398 0 01-1.339 1.014h-23.5a1.397 1.397 0 01-1.32-.956L9.15 13.297zM17.413 29h21.462l4.327-14.836-30.778.084L17.413 29zm.955-3.136a.991.991 0 01-.984-.998c0-.552.44-1 .983-1l19.282-.006c.543 0 .984.446.985.998 0 .551-.44.999-.984.999l-19.282.007z"></path>
+          </svg>
+          Panier
+        </a>
+      </nav>
+    </div>
+  </header>
+  <header id="header-2" class="headerTwo">
+    <div class="headerTwo__container">
+      <div class="headerTwo__top">
+        <div class="headerTwo__topLeft">
+          <div class="headerTwo__logo">
+            <img width="85" height="24" src="/images/header-two/new-next-gold-logo.svg" alt="">
+          </div>
+          <div class="headerTwo__search">
+            <input class="headerTwo__searchInput" type="text" placeholder="Search product or brand"/>
+            <button class="headerTwo__searchButton">
+              <svg viewBox="0 0 43.09 43.64" width="24" height="24" class="headerTwo__searchIcon">
+                <g id="Calque_2" data-name="Calque 2">
+                  <g id="Calque_1-2" data-name="Calque 1">
+                    <path d="M42.51,40.28,30.17,27.94a17.26,17.26,0,1,0-2.86,2.71L39.73,43.06a2,2,0,1,0,2.78-2.78ZM25.14,28.47A14,14,0,1,1,28,25.76"></path>
+                  </g>
+                </g>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="headerTwo__topRight">
+          <div class="headerTwo__account">
+            <p class="headerTwo__accountText">My Account</p>
+            <img src="/images/header-two/next_my-account_desktop.svg" alt="">
+            <img src="/images/header-two/shopping-bag-large.svg" alt="">
+          </div>
+          <div class="headerTwo__buttonWrapper">
+            <button class="headerTwo__button" href="">
+              CHECKOUT
+            </button>
+          </div>
+          <div class="headerTwo__lang">
+            <img width="24" height="24" src="images/header-two/ie.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="headerTwo__nav">
+        <ul class="headerTwo__navList">
+          <li class="headerTwo__navListItem"><a href="#">WOMEN</a></li>
+          <li class="headerTwo__navListItem"><a href="#">MEN</a></li>
+          <li class="headerTwo__navListItem"><a href="#">GIRLS</a></li>
+          <li class="headerTwo__navListItem"><a href="#">BOYS</a></li>
+          <li class="headerTwo__navListItem"><a href="#">BABY</a></li>
+          <li class="headerTwo__navListItem"><a href="#">SHOES</a></li>
+          <li class="headerTwo__navListItem"><a href="#">HOME</a></li>
+          <li class="headerTwo__navListItem"><a href="#">BRANDS</a></li>
+          <li class="headerTwo__navListItem headerTwo__navListItem_red"><a href="#" class="clearance">CLEARANCE</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <div class="content">
+    <main class="main">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad debitis dolorum eius et exercitationem illo,
+        ipsam magnam natus numquam officia officiis, possimus praesentium quae quas sequi sunt tempore voluptates!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad debitis dolorum eius et exercitationem illo,
+        ipsam magnam natus numquam officia officiis, possimus praesentium quae quas sequi sunt tempore voluptates!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad debitis dolorum eius et exercitationem illo,
+        ipsam magnam natus numquam officia officiis, possimus praesentium quae quas sequi sunt tempore voluptates!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad debitis dolorum eius et exercitationem illo,
+        ipsam magnam natus numquam officia officiis, possimus praesentium quae quas sequi sunt tempore voluptates!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad debitis dolorum eius et exercitationem illo,
+        ipsam magnam natus numquam officia officiis, possimus praesentium quae quas sequi sunt tempore voluptates!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad debitis dolorum eius et exercitationem illo,
+        ipsam magnam natus numquam officia officiis, possimus praesentium quae quas sequi sunt tempore voluptates!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad debitis dolorum eius et exercitationem illo,
+        ipsam magnam natus numquam officia officiis, possimus praesentium quae quas sequi sunt tempore voluptates!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad debitis dolorum eius et exercitationem illo,
+        ipsam magnam natus numquam officia officiis, possimus praesentium quae quas sequi sunt tempore voluptates!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad debitis dolorum eius et exercitationem illo,
+        ipsam magnam natus numquam officia officiis, possimus praesentium quae quas sequi sunt tempore voluptates!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad debitis dolorum eius et exercitationem illo,
+        ipsam magnam natus numquam officia officiis, possimus praesentium quae quas sequi sunt tempore voluptates!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad debitis dolorum eius et exercitationem illo,
+        ipsam magnam natus numquam officia officiis, possimus praesentium quae quas sequi sunt tempore voluptates!</p>
+
+      <div id="timer">01:30</div>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad debitis dolorum eius et exercitationem illo,
+        ipsam magnam natus numquam officia officiis, possimus praesentium quae quas sequi sunt tempore voluptates!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad debitis dolorum eius et exercitationem illo,
+        ipsam magnam natus numquam officia officiis, possimus praesentium quae quas sequi sunt tempore voluptates!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad debitis dolorum eius et exercitationem illo,
+        ipsam magnam natus numquam officia officiis, possimus praesentium quae quas sequi sunt tempore voluptates!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad debitis dolorum eius et exercitationem illo,
+        ipsam magnam natus numquam officia officiis, possimus praesentium quae quas sequi sunt tempore voluptates!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad debitis dolorum eius et exercitationem illo,
+        ipsam magnam natus numquam officia officiis, possimus praesentium quae quas sequi sunt tempore voluptates!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad debitis dolorum eius et exercitationem illo,
+        ipsam magnam natus numquam officia officiis, possimus praesentium quae quas sequi sunt tempore voluptates!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad debitis dolorum eius et exercitationem illo,
+        ipsam magnam natus numquam officia officiis, possimus praesentium quae quas sequi sunt tempore voluptates!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad debitis dolorum eius et exercitationem illo,
+        ipsam magnam natus numquam officia officiis, possimus praesentium quae quas sequi sunt tempore voluptates!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad debitis dolorum eius et exercitationem illo,
+        ipsam magnam natus numquam officia officiis, possimus praesentium quae quas sequi sunt tempore voluptates!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad debitis dolorum eius et exercitationem illo,
+        ipsam magnam natus numquam officia officiis, possimus praesentium quae quas sequi sunt tempore voluptates!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad debitis dolorum eius et exercitationem illo,
+        ipsam magnam natus numquam officia officiis, possimus praesentium quae quas sequi sunt tempore voluptates!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad debitis dolorum eius et exercitationem illo,
+        ipsam magnam natus numquam officia officiis, possimus praesentium quae quas sequi sunt tempore voluptates!</p>
+    </main>
+  </div>
+  <div class="underside">
+    <footer id="footer-1" class="footerOne active">
+      <div class="footerOne__top">
+        <div class="footerOne__topCard">
+          <div class="footerOne__topCardIconWrapper">
+            <img class="footerOne__topCardIcon" src="/images/footer-one/bagIcon.svg" alt="">
+          </div>
+          <div class="footerOne__topCardText">
+            <p class="footerOne__topCardTitle">
+              Le choix
+            </p>
+            <p class="footerOne__topCardSubtitle">
+              Neuf et occasion
+            </p>
+          </div>
+        </div>
+        <div class="footerOne__topCard">
+          <div class="footerOne__topCardIconWrapper">
+            <img class="footerOne__topCardIcon_second" src="/images/footer-one/cardIcon.svg" alt="">
+          </div>
+          <div class="footerOne__topCardText">
+            <p class="footerOne__topCardTitle">
+              Le choix
+            </p>
+            <p class="footerOne__topCardSubtitle">
+              Neuf et occasion
+            </p>
+          </div>
+        </div>
+        <div class="footerOne__topCard">
+          <div class="footerOne__topCardIconWrapper">
+            <img class="footerOne__topCardIcon" src="/images/footer-one/shieldIcon.svg" alt="">
+          </div>
+          <div class="footerOne__topCardText">
+            <p class="footerOne__topCardTitle">
+              Le choix
+            </p>
+            <p class="footerOne__topCardSubtitle">
+              Neuf et occasion
+            </p>
+          </div>
+        </div>
+        <div class="footerOne__topCard">
+          <div class="footerOne__topCardIconWrapper">
+            <img class="footerOne__topCardIcon" src="/images/footer-one/customerCareIcon.svg" alt="">
+          </div>
+          <div class="footerOne__topCardText">
+            <p class="footerOne__topCardTitle">
+              Le choix
+            </p>
+            <p class="footerOne__topCardSubtitle">
+              Neuf et occasion
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="footerOne__docs">
+        <ul class="footerOne__docsCardWrapper">
+          <li class="footerOne__docsCardInfo">
+            <div class="footerOne__docsCardInfoTitle">
+              <img class="footerOne__docsCardInfoIconLeft" src="/images/footer-one/starIcon.svg" alt="">
+              Liens utiles
+              <img class="footerOne__docsCardInfoIconRight" src="/images/footer-one/plusIcon.svg" alt="">
+            </div>
+            <ul class="footerOne__docsCardInfoList">
+              <li class="footerOne__docsCardInfoListItem">Mon compte</li>
+              <li class="footerOne__docsCardInfoListItem">Mon panier</li>
+              <li class="footerOne__docsCardInfoListItem">Paiement en plusieurs fois</li>
+              <li class="footerOne__docsCardInfoListItem">Vendre</li>
+              <li class="footerOne__docsCardInfoListItem">Suivre ma commande</li>
+              <li class="footerOne__docsCardInfoListItem">Mon Club R</li>
+            </ul>
+          </li>
+          <li class="footerOne__docsCardInfo">
+            <div class="footerOne__docsCardInfoTitle">
+              <img class="footerOne__docsCardInfoIconLeft" src="/images/footer-one/helpIcon.svg" alt="">
+              Aide
+              <img class="footerOne__docsCardInfoIconRight" src="/images/footer-one/plusIcon.svg" alt="">
+            </div>
+            <ul class="footerOne__docsCardInfoList">
+              <li class="footerOne__docsCardInfoListItem">Besoin d'aide ?</li>
+              <li class="footerOne__docsCardInfoListItem">Ouvrir un e-shop en tant que commerçant</li>
+              <li class="footerOne__docsCardInfoListItem"> Frais de protection acheteurs</li>
+              <li class="footerOne__docsCardInfoListItem">Signaler un contenu illicite</li>
+              <li class="footerOne__docsCardInfoListItem">Plan du site</li>
+              <li class="footerOne__docsCardInfoListItem">Le blog</li>
+            </ul>
+          </li>
+          <li class="footerOne__docsCardInfo">
+            <div class="footerOne__docsCardInfoTitle">
+              <img class="footerOne__docsCardInfoIconLeft" src="/images/footer-one/infoIcon.svg" alt="">
+              Rakuten
+              <img class="footerOne__docsCardInfoIconRight" src="/images/footer-one/plusIcon.svg" alt="">
+            </div>
+            <ul class="footerOne__docsCardInfoList">
+              <li class="footerOne__docsCardInfoListItem">Carrières</li>
+              <li class="footerOne__docsCardInfoListItem">Conditions générales</li>
+              <li class="footerOne__docsCardInfoListItem">*Conditions des offres</li>
+              <li class="footerOne__docsCardInfoListItem">Politique Vie privée</li>
+              <li class="footerOne__docsCardInfoListItem">Gestion des cookies</li>
+              <li class="footerOne__docsCardInfoListItem">Affiliation</li>
+              <li class="footerOne__docsCardInfoListItem">Devenez annonceur</li>
+              <li class="footerOne__docsCardInfoListItem">A propos de Rakuten</li>
+              <li class="footerOne__docsCardInfoListItem">Fonctionnement du service</li>
+              <li class="footerOne__docsCardInfoListItem">Assurances</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="footerOne__company">
+        <div class="footerOne__companySocials">
+          <a class="footerOne__companySocialsLink" href="#">
+            <img class="footerOne__companySocialsIcons" src="/images/company-icon/linkedinIcon.svg" alt="">
+          </a>
+          <a class="footerOne__companySocialsLink" href="#">
+            <img class="footerOne__companySocialsIcons" src="/images/company-icon/facebookIcon.svg" alt="">
+          </a>
+          <a class="footerOne__companySocialsLink" href="#">
+            <img class="footerOne__companySocialsIcons" src="/images/company-icon/twitterIcon.svg" alt="">
+          </a>
+          <a class="footerOne__companySocialsLink" href="#">
+            <img class="footerOne__companySocialsIcons" src="/images/company-icon/instagramIcon.svg" alt="">
+          </a>
+          <a class="footerOne__companySocialsLink" href="#">
+            <img class="footerOne__companySocialsIcons" src="/images/company-icon/youtubeIcon.svg" alt="">
+          </a>
+          <a class="footerOne__companySocialsLink" href="#">
+            <img class="footerOne__companySocialsIcons" src="/images/company-icon/pinterestIcon.svg" alt="">
+          </a>
+        </div>
+        <div class="footerOne__companyPayments">
+          <div class="footerOne__companyPaymentsItem">
+            <img class="footerOne__companyPaymentsIcons" width="45" height="25" src="/images/company-icon/visaIcon.svg"
+                 alt="">
+          </div>
+          <div class="footerOne__companyPaymentsItem">
+            <img class="footerOne__companyPaymentsIcons" width="34" height="34"
+                 src="/images/company-icon/mastercardIcon.svg" alt="">
+          </div>
+          <div class="footerOne__companyPaymentsItem">
+            <img class="footerOne__companyPaymentsIcons" width="54" height="30" src="/images/company-icon/klarna.svg"
+                 alt="">
+          </div>
+          <div class="footerOne__companyPaymentsItem">
+            <img class="footerOne__companyPaymentsIcons" width="60" height="34"
+                 src="/images/company-icon/paypalIcon.svg"
+                 alt="">
+          </div>
+          <div class="footerOne__companyPaymentsItem">
+            <img class="footerOne__companyPaymentsIcons" width="73" height="25" src="/images/company-icon/floaLogo.svg"
+                 alt="">
+          </div>
+          <div class="footerOne__companyPaymentsItem">
+            <img class="footerOne__companyPaymentsIcons" width="34" height="34"
+                 src="/images/company-icon/americanExpress.svg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="footerOne__application">
+        <div class="footerOne__applicationContent">
+          <div class="footerOne__applicationText">
+            <a class="footerOne__applicationLink" href="">Avec l'appli Rakuten, bénéficiez de 5% remboursés en Rakuten
+              Points sur tous vos achats !</a>
+          </div>
+          <div class="footerOne__applicationImages">
+            <a href=""> <img class="footerOne__applicationImage" width="135" height="40"
+                             src="/images/footer-one/appStoreIcon.svg" alt=""></a>
+            <a href=""> <img class="footerOne__applicationImage" width="135" height="40"
+                             src="/images/footer-one/playStoreIcon.svg" alt=""></a>
+          </div>
+        </div>
+      </div>
+      <div class="footerOne__infoSection">
+        <div class="footerOne__infoSectionTitle">
+          <img width="91" height="61" src="/images/logo.svg" alt="">
+        </div>
+        <div class="footerOne__infoSectionContent">
+          <ul class="footerOne__infoSectionContentList">
+            <li class="footerOne__infoSectionContentListItem">Rakuten Kobo</li>
+            <li class="footerOne__infoSectionContentListItem">Rakuten TV</li>
+            <li class="footerOne__infoSectionContentListItem">Rakuten Viber</li>
+            <li class="footerOne__infoSectionContentListItem">Rakuten Viki</li>
+            <li class="footerOne__infoSectionContentListItem">Plus de services</li>
+            <li class="footerOne__infoSectionContentListItem">À propos de Rakuten</li>
+          </ul>
+        </div>
+        <div class="footerOne__infoSectionLang"></div>
+      </div>
+      <div class="footerOne__licence">
+        © Rakuten France 2000 - 2024
+      </div>
+      <div class="footerOne__popular">
+        <ul class="footerOne__popularList">
+          <li class="footerOne__popularListItem">
+            <a class="footerOne__popularListItemLink" href="">
+              xiaomi mix flip
+            </a>
+          </li>
+          <li class="footerOne__popularListItem">
+            <a class="footerOne__popularListItemLink" href="">
+              xiaomi
+            </a>
+          </li>
+          <li class="footerOne__popularListItem">
+            <a class="footerOne__popularListItemLink" href="">
+              asos
+            </a>
+          </li>
+          <li class="footerOne__popularListItem">
+            <a class="footerOne__popularListItemLink" href="">
+              Nike Tn
+            </a>
+          </li>
+          <li class="footerOne__popularListItem">
+            <a class="footerOne__popularListItemLink" href="">
+              Lego Harry Potter
+            </a>
+          </li>
+          <li class="footerOne__popularListItem">
+            <a class="footerOne__popularListItemLink" href="">
+              Nike Air Max
+            </a>
+          </li>
+          <li class="footerOne__popularListItem">
+            <a class="footerOne__popularListItemLink" href="">
+              Lave-linge séchant
+            </a>
+          </li>
+          <li class="footerOne__popularListItem">
+            <a class="footerOne__popularListItemLink" href="">
+              Radiateur
+            </a>
+          </li>
+          <li class="footerOne__popularListItem">
+            <a class="footerOne__popularListItemLink" href="">
+              Imprimante Laser
+            </a>
+          </li>
+          <li class="footerOne__popularListItem">
+            <a class="footerOne__popularListItemLink" href="">
+              Appareil à raclette
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <footer id="footer-2" class="footerTwo">
+      <div class="footerTwo__container">
+        <div class="footerTwo__social">
+          <h4 class="footerTwo__socialTitle">Our Social Networks</h4>
+          <div class="footerTwo__socialIcons">
+            <a class="footerTwo__socialIcon" href="#"><img src="/images/footer-two/social-facebook.svg" alt="Facebook"></a>
+            <a class="footerTwo__socialIcon" href="#"><img src="/images/footer-two/social-x.svg" alt="X"></a>
+            <a class="footerTwo__socialIcon" href="#"><img src="/images/footer-two/social-tiktok.svg" alt="TikTok"></a>
+            <a class="footerTwo__socialIcon" href="#"><img src="/images/footer-two/social-instagram.svg"
+                                                           alt="Instagram"></a>
+            <a class="footerTwo__socialIcon" href="#"><img src="/images/footer-two/social-pinterest.svg"
+                                                           alt="Pinterest"></a>
+            <a class="footerTwo__socialIcon" href="#"><img src="/images/footer-two/social-youtube.svg"
+                                                           alt="YouTube"></a>
+          </div>
+        </div>
+
+        <div class="footerTwo__account">
+          <a href="" class="footerTwo__accountLink">
+            <img width="24" height="24" src="/images/footer-two/myaccount.svg" alt="">
+            <div class="footerTwo__accountLinkText">
+              <h5 class="footerTwo__accountLinkTextTitle">My account</h5>
+              <p class="footerTwo__accountLinkTextSubtitle">Sign-in to your account</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="footerTwo__docs">
+          <div class="footerTwo__docsItem">
+            <h6 class="footerTwo__docsItemTitle">Help</h6>
+            <ul class="footerTwo__docsItemList">
+              <li class="footerTwo__docsItemListLink"><a href="#">Returns Information</a></li>
+              <li class="footerTwo__docsItemListLink"><a href="">Shipping Information</a></li>
+              <li class="footerTwo__docsItemListLink"><a href="">Contact Us</a></li>
+              <li class="footerTwo__docsItemListLink"><a href="">Product Recall</a></li>
+              <li class="footerTwo__docsItemListLink"><a href="">Find a Store</a></li>
+            </ul>
+          </div>
+          <div class="footerTwo__docsItem">
+            <h6 class="footerTwo__docsItemTitle">Privacy & Legal</h6>
+            <ul class="footerTwo__docsItemList">
+              <li class="footerTwo__docsItemListLink"><a href="#">Privacy & Cookie Policy</a></li>
+              <li class="footerTwo__docsItemListLink"><a href="#">Gender Pay Gap Report</a></li>
+              <li class="footerTwo__docsItemListLink"><a href="#">Terms & Conditions</a></li>
+              <li class="footerTwo__docsItemListLink"><a href="#">Manually Manage Cookies</a></li>
+            </ul>
+          </div>
+          <div class="footerTwo__docsItem">
+            <h6 class="footerTwo__docsItemTitle">Departments</h6>
+            <ul class="footerTwo__docsItemList">
+              <li class="footerTwo__docsItemListLink"><a href="#">Womens</a></li>
+              <li class="footerTwo__docsItemListLink"><a href="#">Mens</a></li>
+              <li class="footerTwo__docsItemListLink"><a href="#">Boys</a></li>
+              <li class="footerTwo__docsItemListLink"><a href="#">Girls</a></li>
+              <li class="footerTwo__docsItemListLink"><a href="#">Home</a></li>
+              <li class="footerTwo__docsItemListLink"><a href="#">Baby</a></li>
+              <li class="footerTwo__docsItemListLink"><a href="#">Brands</a></li>
+            </ul>
+          </div>
+          <div class="footerTwo__docsItem">
+            <h6 class="footerTwo__docsItemTitle">Other Services</h6>
+            <ul class="footerTwo__docsItemList">
+              <li class="footerTwo__docsItemListLink"><a href="#">Media & Press</a></li>
+              <li class="footerTwo__docsItemListLink"><a href="#">The Company</a></li>
+              <li class="footerTwo__docsItemListLink"><a href="#">Careers@next</a></li>
+              <li class="footerTwo__docsItemListLink"><a href="#">Our Affiliate Programme</a></li>
+            </ul>
+          </div>
+        </div>
+
+
+        <div class="footerTwo__licence">
+          <a href="#" class="footerTwo__licenceTitle">View mobile site</a>
+          <p class="footerTwo__licenceSubtitle">&copy; 2024 Next Retail Ltd. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <button id="scrollToTopBtn">⬆️ До верху</button>
+  </div>
+</div>
+<script src="/js/index.js"></script>
+</body>
+</html>
+

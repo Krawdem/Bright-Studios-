@@ -1,0 +1,130 @@
+.footerTwo {
+    width: 100%;
+    bottom: 0;
+    background: #f7f7f7;
+}
+
+.footerTwo__container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.footerTwo__social {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eeeeee;
+    text-align: center;
+}
+
+.footerTwo__socialTitle {
+    font-size: 14px;
+    margin-top: 4px;
+    margin-bottom: 10px;
+}
+
+.footerTwo__socialIcon {
+    width: 44px;
+    height: 44px;
+    display: inline-block;
+}
+
+.footerTwo__accountLink {
+    display: flex;
+    text-decoration: none;
+    color: #000000;
+    padding: 12px 18px 12px 40px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.footerTwo__accountLinkText {
+    margin-left: 18px;
+}
+
+.footerTwo__accountLinkTextTitle {
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.footerTwo__accountLinkTextSubtitle {
+    font-size: 12px;
+}
+
+.footerTwo__docs {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 40px;
+}
+
+.footerTwo__docsItem {
+    padding-top: 20px;
+    width: 25%;
+}
+
+.footerTwo__docsItemTitle {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.footerTwo__docsItemList {
+    padding-top: 16px;
+}
+
+.footerTwo__docsItemListLink {
+    margin-bottom: 12px;
+
+    & a {
+        color: #000000;
+        text-decoration: none;
+    }
+
+    &:hover {
+        .footerTwo__docsItemListLink a {
+            text-decoration: underline;
+        }
+    }
+}
+
+.footerTwo__licence {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    border-top: 1px solid #eeeeee;
+}
+
+.footerTwo__licenceTitle {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #257F29;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .footerTwo__docs {
+        padding-left: 16px;
+    }
+
+    .footerTwo__docsItem {
+        width: 100%;
+        border-bottom: 1px solid #eeeeee;
+    }
+
+    .footerTwo__docsItemTitle {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    .footerTwo__accountLink {
+        padding: 12px 16px 12px 16px;
+    }
+
+    .footerTwo__docsItemList {
+        display: none;
+    }
+}
+
+@media (max-width: 575px) {
+    .footerTwo__docsItem {
+        width: 100%;
+    }
+}
